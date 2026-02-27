@@ -1,0 +1,1 @@
+export const URL_data = "http://127.0.0.1:5000";
