@@ -7,7 +7,6 @@
   height: 60px;
 
   background: #222;
-  color: white;
 
   display: flex;
   align-items: center;
@@ -37,12 +36,7 @@
 /* Décalage du contenu pour ne pas passer sous le bandeau */
 .content {
   padding-top: 80px;
-}
-
-
-.page {
-  padding: 40px;
-  font-family: Arial, sans-serif;
+  background: #3838383a;
 }
 
 h1 {
@@ -91,4 +85,92 @@ h1 {
 .card p {
   font-size: 14px;
   color: #555;
+}
+
+
+
+.select-container select {
+  width: auto;
+  padding: 8px 12px;
+  border-radius: 15px;
+  background: #4a4a4a;
+  color: white;
+  font-size: 15px;
+  margin-left: 20%;
+}
+
+.select-container {
+  position: relative;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.page-tableau {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.table-especes {
+  width: 80%;
+  border-collapse: collapse;
+  background: white;
+  margin: 0 auto;
+  box-shadow: 0 25px 25px #00000000;
+}
+
+.table-especes th,
+.table-especes td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-especes th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+.table-especes tr:hover {
+  border: 2px solid #0000003a;
+}
+
+
+
+.page {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.form-ajout {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.form-ajout input,
+.form-ajout textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-ajout button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4a4a4a;
+  color: white;
+  cursor: pointer;
+}
+
+.form-ajout button:hover {
+  background: #333;
+}
+
+
+
+.image {
+  padding: 40px;
+  font-family: Arial, sans-serif;
 }
