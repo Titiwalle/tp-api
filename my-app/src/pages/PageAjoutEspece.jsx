@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { URL_data } from "../config";
+
 
 function PageAjoutEspece() {
   const [form, setForm] = useState({
@@ -41,7 +43,7 @@ function PageAjoutEspece() {
       images: form.images.filter(url => url.trim() !== "")
     };
 
-    const res = await fetch("http://localhost:5000/especes", {
+    const res = await fetch((`${URL_data}/especes`), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)

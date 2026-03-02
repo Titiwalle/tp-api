@@ -18,16 +18,16 @@ function PageListe() {
       <h1>Oiseaux</h1>
 
       <div className="flex-container">
+        
         {especes.map(e => (
           <div className="card" key={e.id}>
             <img src={e.images[0]} alt={e.nom_scientifique} />
-            <h2>{e.nom_scientifique}</h2>
-            <p>{e.description}</p>
 
-            {/* Lien vers la page détail */}
-            <Link to={`/espece/${e.id}`} className="btn">
-              Voir la fiche
-            </Link>
+            <div className="info">
+              <h2>{e.nom_scientifique}</h2>
+              <p>{e.description}</p>
+            </div>
+
           </div>
         ))}
       </div>

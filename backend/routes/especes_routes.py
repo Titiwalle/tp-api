@@ -142,4 +142,18 @@ def delete_espece(id_espece):
     db.session.delete(espece)
     db.session.commit()
 
-    return jsonify({"message": f"Espèce {id_espece} supprimée avec succès"}), 200
+    return jsonify({"message": f"Espèce {id} supprimée avec succès"}), 200
+
+
+@especes_bp.route("/especes/<int:id_espece>/images", methods=["POST"])
+def add_image(id_espece):
+    espece = Espece.query.get(id_espece)
+    if not espece:
+        return jsonify({"error": "Espèce introuvable"}), 404
+
+    data = request.json
+    img = Image(url=data["url"], id_espece=id_espece)
+    db.session.add(img)
+    db.session.commit()
+
+    return jsonify({"message": "Image ajoutée"}), 201
